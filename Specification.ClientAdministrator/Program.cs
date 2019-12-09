@@ -20,7 +20,7 @@ namespace Specification.ClientAdministrator
             Console.WriteLine("==============================================\n");
             #endregion
 
-            #region Get Client By Id
+            #region Get Client By Min Age
             Console.WriteLine("==============================================");
             Console.WriteLine("Client By Min Age \n");
             GetClientByMinAge(clientRepository);
