@@ -1,0 +1,116 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.DataSource\\Specification.ClientAdministrator.DataSource.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.DataSource\\Specification.ClientAdministrator.DataSource.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.DataSource\\Specification.ClientAdministrator.DataSource.csproj",
+        "projectName": "Specification.ClientAdministrator.DataSource",
+        "projectPath": "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.DataSource\\Specification.ClientAdministrator.DataSource.csproj",
+        "packagesPath": "C:\\Users\\jordinola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.DataSource\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jordinola\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.Models\\Specification.ClientAdministrator.Models.csproj": {
+                "projectPath": "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.Models\\Specification.ClientAdministrator.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.Models\\Specification.ClientAdministrator.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.Models\\Specification.ClientAdministrator.Models.csproj",
+        "projectName": "Specification.ClientAdministrator.Models",
+        "projectPath": "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.Models\\Specification.ClientAdministrator.Models.csproj",
+        "packagesPath": "C:\\Users\\jordinola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jordinola\\source\\repos\\SpecificationPattern\\Specification.ClientAdministrator.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jordinola\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
