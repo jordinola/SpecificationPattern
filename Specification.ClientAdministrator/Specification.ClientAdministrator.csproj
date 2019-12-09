@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Specification.ClientAdministrator.Repository\Specification.ClientAdministrator.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

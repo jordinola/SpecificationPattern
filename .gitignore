@@ -5,10 +5,10 @@
 /.vs/
 /Specification.ClientAdministrator/.vs/Specification.ClientAdministrator/v16
 /Specification.ClientAdministrator/obj
+/Specification.ClientAdministrator/bin
 /Specification.ClientAdministrator.DataSource/obj
+/Specification.ClientAdministrator.DataSource/bin
 /Specification.ClientAdministrator.Models/obj
+/Specification.ClientAdministrator.Models/bin
 /Specification.ClientAdministrator.Repository/obj
-/Specification.ClientAdministrator/bin/Debug/netcoreapp2.1
-/Specification.ClientAdministrator.DataSource/bin/Debug/netcoreapp2.1
-/Specification.ClientAdministrator.Models/bin/Debug/netcoreapp2.1
-/Specification.ClientAdministrator.Repository/bin/Debug/netcoreapp2.1
+/Specification.ClientAdministrator.Repository/bin
