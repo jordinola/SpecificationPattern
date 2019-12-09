@@ -20,14 +20,9 @@ namespace Specification.ClientAdministrator.Repository
             return _data.Where(c => c.Name.Contains(name) || c.LastName.Contains(name)).ToList();
         }
 
-        public List<Client> GetClientByAge(int age)
+        public List<Client> GetClientByMinAge(int? age = null)
         {
-            return _data.Where(c => c.Age == age).ToList();
-        }
-
-        public Client GetClientById(int id)
-        {
-            return _data.Where(c => c.ClientId == id).FirstOrDefault();
+            return _data.Where(c => c.Age < (age.HasValue ? age.Value : 25)).ToList();
         }
     }
 }
