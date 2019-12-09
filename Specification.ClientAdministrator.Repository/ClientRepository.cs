@@ -13,7 +13,5 @@ namespace Specification.ClientAdministrator.Repository
         {
             _data = new ClientDataSource().GetClientsData();
         }
-
-
     }
 }
