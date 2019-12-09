@@ -15,14 +15,19 @@ namespace Specification.ClientAdministrator.Repository
             _data = new ClientDataSource().GetClientsData();
         }
 
-        public List<Client> GetClientByName(string name)
+        public List<Client> GetClientsByName(string name)
         {
             return _data.Where(c => c.Name.Contains(name) || c.LastName.Contains(name)).ToList();
         }
 
-        public List<Client> GetClientByMinAge(int? age = null)
+        public List<Client> GetClientsByMinAge(int? age = null)
         {
             return _data.Where(c => c.Age < (age.HasValue ? age.Value : 25)).ToList();
+        }
+
+        public List<Client> GetClientsForDiscount()
+        {
+            return _data.Where(c => c.JoinDate < DateTime.Now.AddDays(-30) && c.Age > 25).ToList();
         }
     }
 }

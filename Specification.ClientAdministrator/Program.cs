@@ -10,19 +10,27 @@ namespace Specification.ClientAdministrator
         {
             var clientRepository = new ClientRepository();
 
-            #region Get Client By Name
+            #region Get Clients By Name
             Console.WriteLine("==============================================");
-            Console.WriteLine("Client By Name\n");
+            Console.WriteLine("Clients By Name\n");
 
             GetClientByName(clientRepository);
 
             Console.WriteLine("==============================================\n");
             #endregion
 
-            #region Get Client By Min Age
+            #region Get Clients By Min Age
             Console.WriteLine("==============================================");
-            Console.WriteLine("Client By Id \n");
+            Console.WriteLine("Clients By Id \n");
             GetClientByMinAge(clientRepository);
+
+            Console.WriteLine("==============================================\n");
+            #endregion
+
+            #region Get Clients for Discount
+            Console.WriteLine("==============================================");
+            Console.WriteLine("Clients For Discount \n");
+            GetClientsForDiscount(clientRepository);
 
             Console.WriteLine("==============================================\n");
             #endregion
@@ -32,7 +40,7 @@ namespace Specification.ClientAdministrator
 
         private static void GetClientByName(ClientRepository clientRepository)
         {
-            var clients = clientRepository.GetClientByName("a");
+            var clients = clientRepository.GetClientsByName("a");
 
             foreach (var client in clients)
             {
@@ -42,11 +50,21 @@ namespace Specification.ClientAdministrator
 
         private static void GetClientByMinAge(ClientRepository clientRepository)
         {
-            var clients = clientRepository.GetClientByMinAge(25);
+            var clients = clientRepository.GetClientsByMinAge(25);
 
             foreach (var client in clients)
             {
                 Console.WriteLine($"Client with Id {client.ClientId}, Name {client.Name} {client.LastName} and Age {client.Age}");
+            }
+        }
+
+        private static void GetClientsForDiscount(ClientRepository clientRepository)
+        {
+            var clients = clientRepository.GetClientsForDiscount();
+
+            foreach (var client in clients)
+            {
+                Console.WriteLine($"Client with Id {client.ClientId}, Name {client.Name} {client.LastName}, Join Date {client.JoinDate} and Age {client.Age}");
             }
         }
     }
