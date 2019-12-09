@@ -207,6 +207,43 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Specification.ClientAdministrator.DataSource/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Specification.ClientAdministrator.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Specification.ClientAdministrator.DataSource.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Specification.ClientAdministrator.DataSource.dll": {}
+        }
+      },
+      "Specification.ClientAdministrator.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Specification.ClientAdministrator.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Specification.ClientAdministrator.Models.dll": {}
+        }
+      },
+      "Specification.ClientAdministrator.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Specification.ClientAdministrator.DataSource": "1.0.0",
+          "Specification.ClientAdministrator.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Specification.ClientAdministrator.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Specification.ClientAdministrator.Repository.dll": {}
+        }
       }
     }
   },
@@ -680,11 +717,27 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Specification.ClientAdministrator.DataSource/1.0.0": {
+      "type": "project",
+      "path": "../Specification.ClientAdministrator.DataSource/Specification.ClientAdministrator.DataSource.csproj",
+      "msbuildProject": "../Specification.ClientAdministrator.DataSource/Specification.ClientAdministrator.DataSource.csproj"
+    },
+    "Specification.ClientAdministrator.Models/1.0.0": {
+      "type": "project",
+      "path": "../Specification.ClientAdministrator.Models/Specification.ClientAdministrator.Models.csproj",
+      "msbuildProject": "../Specification.ClientAdministrator.Models/Specification.ClientAdministrator.Models.csproj"
+    },
+    "Specification.ClientAdministrator.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Specification.ClientAdministrator.Repository/Specification.ClientAdministrator.Repository.csproj",
+      "msbuildProject": "../Specification.ClientAdministrator.Repository/Specification.ClientAdministrator.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Specification.ClientAdministrator.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -722,7 +775,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jjob3\\Source\\Repos\\SpecificationPattern\\Specification.ClientAdministrator.Repository\\Specification.ClientAdministrator.Repository.csproj": {
+              "projectPath": "C:\\Users\\jjob3\\Source\\Repos\\SpecificationPattern\\Specification.ClientAdministrator.Repository\\Specification.ClientAdministrator.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
