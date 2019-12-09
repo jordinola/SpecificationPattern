@@ -2,4 +2,9 @@
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
 
+/.vs/
 /Specification.ClientAdministrator/.vs/Specification.ClientAdministrator/v16
+/Specification.ClientAdministrator/obj
+/Specification.ClientAdministrator.DataSource/obj
+/Specification.ClientAdministrator.Models/obj
+/Specification.ClientAdministrator.Repository/obj
