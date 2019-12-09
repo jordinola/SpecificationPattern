@@ -8,3 +8,7 @@
 /Specification.ClientAdministrator.DataSource/obj
 /Specification.ClientAdministrator.Models/obj
 /Specification.ClientAdministrator.Repository/obj
+/Specification.ClientAdministrator/bin/Debug/netcoreapp2.1
+/Specification.ClientAdministrator.DataSource/bin/Debug/netcoreapp2.1
+/Specification.ClientAdministrator.Models/bin/Debug/netcoreapp2.1
+/Specification.ClientAdministrator.Repository/bin/Debug/netcoreapp2.1
