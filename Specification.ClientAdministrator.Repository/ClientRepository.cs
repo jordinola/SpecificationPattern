@@ -1,6 +1,6 @@
 ﻿using Specification.ClientAdministrator.DataSource;
 using Specification.ClientAdministrator.Models;
-using System;
+using Specification.ClientAdministrator.Models.Specifications;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,19 +15,9 @@ namespace Specification.ClientAdministrator.Repository
             _data = new ClientDataSource().GetClientsData();
         }
 
-        public List<Client> GetClientByName(string name)
+        public List<Client> GetClientBy(IClientSpecification clientSpecification)
         {
-            return _data.Where(c => c.Name.Contains(name) || c.LastName.Contains(name)).ToList();
-        }
-
-        public List<Client> GetClientByAge(int age)
-        {
-            return _data.Where(c => c.Age == age).ToList();
-        }
-
-        public Client GetClientById(int id)
-        {
-            return _data.Where(c => c.ClientId == id).FirstOrDefault();
+            return _data.Where(clientSpecification.IsSatisfiedBy.Compile()).ToList();
         }
     }
 }
