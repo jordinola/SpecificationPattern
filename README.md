@@ -8,21 +8,21 @@ description: >-
 
 ## ✅Goal
 
-The Specification Pattern seek the ability to being able to re use common business criteria along the application. This would be achieved by encapsulating the business logic into "specifications" classes that will define specific logic that would be able to be re used anywhere along the application. 
+The Specification Pattern seeks the ability to being able to re use common business criteria along the application. This would be achieved by encapsulating the business logic into "specifications" classes that will define specific logic that would be able to be re used anywhere along the application. 
 
 ## 🌎Real case example
 
-Let's have a bettern understanding with the following example:
+Let's have a better understanding with the following example:
 
 We are developing an application related to glasses. We have the following functionalities:
 
 * List glasses according to their brand or minimum number of sales
 * Apply a discount to all glasses of the same brand or that match a minimum number of sales
-* Filter the glasses displaying in the application according to their brand or those that match the minimum number of sales
+* Filter the glasses displayed in the application according to their brand or those that match the minimum number of sales
 
 ![](.gitbook/assets/specificationrealworldcase.JPG)
 
-In this example, we can identify that specific logic is being replicated accross all the requirements we have. Those are:
+In this example, we can identify that specific logic is being replicated across all the requirements we have. Those are:
 
 * Logic according to the Brand
 * Logic according to the Minimum Number of Sales
@@ -31,16 +31,16 @@ By identifying this kind of scenario, we match the requirements to consider impl
 
 ## 🏛Architecture
 
-The participants of this patterns would be:
+The participants of this pattern would be:
 
 * The _**ISpecification**_ interface which will have our method _**IsSatisfeidBy**_.
-* The _**Concrete Specifications**_ ****these classes will implement the _**ISpecification**_ interface and will handle the business logic in the _**IsSatisfiedBy**_ method.
+* The _**Concrete Specifications**_ ****which are classes that will implement the _**ISpecification**_ interface and will handle the business logic in the _**IsSatisfiedBy**_ method.
 
 ![](.gitbook/assets/specification1.JPG)
 
-Let's consider the example we saw in the previous point. Having in mind the logic we identified, we can apply the pattern the following way:
+Let's consider the example we saw in the previously. Having in mind the logic we identified, we can apply the pattern the following way:
 
-* The _**ISpecification**_ would be our interface defined by the pattern that will define the IsSatisfiedBy method.
+* The _**ISpecification**_ would be our interface described by the pattern that will define the IsSatisfiedBy method.
 * Our _**Concrete Specifications**_ would be the _**BrandSpecification**_ ****and _**MinSalesSpecification**_. Each of them will handle the logic that their own names express. 
 
 ![](.gitbook/assets/specification2.JPG)
@@ -52,13 +52,13 @@ This way, we have decoupled the logic of matching by brand name and minimum numb
 {% hint style="success" %}
 **Makes the system easier to maintain.**
 
-Having the business logic decoupled and centralized in specifc classes makes easier to identify where we need to make changes or updates.
+Having the business logic decoupled and centralized in specific classes makes easier to identify where we need to make changes or updates.
 {% endhint %}
 
 {% hint style="success" %}
 **Makes the system scalable.**
 
-Having the functionalities separated and focused, it is easier to keep adding new features without affecting the created ones.
+Having the functionalities separated and focused, allow us to keep adding new features without affecting the created ones.
 {% endhint %}
 
 ## ⏲When to use it?
@@ -66,13 +66,13 @@ Having the functionalities separated and focused, it is easier to keep adding ne
 {% hint style="success" %}
 **When having repetitive data access query criteria separated along the application.**
 
-Taking the first example, we would end up having the same filter criteria we getting information from our data source. These would be the brand name and min. number of sales. When having this kind of repetitiveness applying this pattern will be very usefull.
+Taking the first example, we would end up having the same filter criteria for getting information from our data source. These would be the brand name and min. number of sales. When having this kind of repetitiveness applying this pattern will be very useful.
 {% endhint %}
 
 {% hint style="success" %}
 **When having complicated queries to understand.**
 
-Some times, we might end up having complex queries in our repositories. By applying the pattern, we are able to extract that complexity out of our repositories requests and centralize them in specifc classes that will express, by their names, what is their responsibility.
+Some times, we might end up having complex queries in our repositories. By applying the pattern, we are able to extract that complexity out of our repositories requests and centralize them in specific classes that will express, by their names, what is their responsibility.
 {% endhint %}
 
 {% hint style="success" %}
@@ -86,7 +86,7 @@ Along our application, we might have some specific validations or filter criteri
 {% hint style="warning" %}
 **When the specification won’t be re used.**
 
-We might end up thinking that having the business logic decoupled and centralized in our specifications is the best approach to every scenario and consider it always. However, there is no advantage in implementing specifications that will take time to implement if they only are going to be used once or even a couple of times.
+We might end up thinking that having the business logic decoupled and centralized in our specifications is the best approach to every scenario and consider it always. However, there is no advantage in implementing specifications, that will take time to implement, if they are only  going to be used once or even a couple of times.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -108,7 +108,7 @@ With this pattern, this principle is being achieved by having each functionality
 {% hint style="success" %}
 **Open/Closed Principle**
 
-Once finished an implementation, you can keep creating additional abstractions without affecting the created ones. _\*\*_
+Once finished an implementation, you can keep creating additional specifications without affecting the created ones. 
 {% endhint %}
 
 {% hint style="success" %}
@@ -132,7 +132,7 @@ Having in mind we are decoupling complex query logic into a specification. We wo
 {% hint style="success" %}
 **Composition of specifications.**
 
-The _**Composite Specification**_ is an implementation of the _**Specification Pattern**_ which allow us to combine specifications and create complex requests.
+The _**Composite Specification**_ is an implementation of the _**Specification Pattern**_ which allow us to combine specifications in order to create complex rules.
 {% endhint %}
 
 ### Disadvantages
@@ -144,9 +144,9 @@ At the beginning, implementing the pattern may seen complicate to implement. Thi
 {% endhint %}
 
 {% hint style="info" %}
-**Enforced encapsulation of business rule.**
+**Enforced encapsulation of business rules.**
 
-This is related to the previous point. If we don't invest time identifying the business rules that are worth to be decoupled into specifications, we might end up having the wrond idea that every single business rule, validation or filter criteria should be put into a specification.
+This is related to the previous point. If we don't invest time identifying the business rules that are worth to be decoupled into specifications, we might end up having the wrond idea that every single business rule should be moved into a specification class.
 {% endhint %}
 
 ## ‼Common mistakes when implementing
@@ -154,7 +154,7 @@ This is related to the previous point. If we don't invest time identifying the b
 {% hint style="danger" %}
 **Trying to encapsulate all the query criteria into specifications.**
 
-If we don't invest time identifying the business rules that are worth to be decoupled into specifications, we might end up having the wrond idea that every single business rule, validation or filter criteria should be put into a specification
+If we don't invest time identifying the business rules that are worth to be decoupled into specifications, we might end up having the wrong idea that every single business rule, validation or filter criteria should be moved into a specification class.
 {% endhint %}
 
 ## Demo
